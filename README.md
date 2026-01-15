@@ -1,3 +1,14 @@
+업로드해주신 **`app18.py`** 파일은 예비창업패키지(딥테크 분야) 심사 제출용으로 최적화된 **'AI 법률 마스터 (Ultimate Edition)'**의 완성본 코드입니다.
+
+이 코드의 기술적 우수성과 데이터 자산 가치를 심사위원에게 효과적으로 어필할 수 있는 **전문적인 `README.md`**를 작성해 드립니다. 이 파일을 프로젝트 폴더에 함께 포함시켜 제출하시면 신뢰도가 크게 상승합니다.
+
+---
+
+### 📄 `README.md`
+
+(아래 내용을 복사하여 `README.md` 파일로 저장하세요.)
+
+```markdown
 # 🏛️ AI 법률 마스터 (AI Legal Master) - Deep Tech Edition
 
 > **2025 예비창업패키지 (딥테크 분야) MVP 소스코드**
@@ -52,3 +63,76 @@ Python 3.9 이상 환경이 필요합니다.
 # 가상환경 생성 (권장)
 python -m venv venv
 source venv/bin/activate  # Windows: venv\Scripts\activate
+
+```
+
+### 2. 라이브러리 설치
+
+첨부된 `requirements.txt`를 통해 의존성을 설치합니다.
+
+```bash
+pip install streamlit google-generativeai python-docx reportlab pypdf Pillow
+
+```
+
+### 3. 애플리케이션 실행
+
+```bash
+streamlit run app18.py
+
+```
+
+---
+
+## 🔍 심사위원 검증 포인트 (For Reviewers)
+
+**[별첨 1] 사업계획서의 '실현 가능성' 및 '기술성' 항목을 검증할 수 있는 코드 위치입니다.**
+
+1. **데이터 자산 구축 여부**
+* 📂 `app18.py` -> **Line 30 ~ 150 구간**
+* `COURT_LIST` 및 `JURISDICTION_MAP` 변수에 전국 법원 매핑 데이터가 하드코딩 되어 있습니다.
+
+
+2. **보안 기술 (비식별화) 구현 여부**
+* 📂 `app18.py` -> **`def mask_sensitive_data(text)` 함수**
+* 실제 입력된 주민번호가 마스킹 처리되는 로직을 확인할 수 있습니다.
+
+
+3. **수익화 모델 (BM) 구현 여부**
+* 📂 `app18.py` -> **Sidebar 하단 및 Tab 구성**
+* 무료 진단(Lead Magnet)에서 유료 서면 작성 및 전문가 매칭(Link)으로 이어지는 UX 설계를 확인 가능합니다.
+
+
+
+---
+
+## 📜 License
+
+Copyright © 2025 AI Legal Master Team.
+본 코드는 2025 예비창업패키지 심사 제출용으로 작성되었습니다.
+
+```
+
+---
+
+### 💡 활용 팁
+1.  **폴더 구조:** 제출하실 때 폴더 구조를 아래와 같이 만드시면 가장 전문적으로 보입니다.
+    ```text
+    AI_Legal_Master/
+    ├── app18.py             (메인 코드)
+    ├── README.md            (설명서)
+    ├── requirements.txt     (설치 파일)
+    └── .streamlit/
+        └── config.toml      (설정 파일)
+    ```
+2.  **requirements.txt 내용:** (만약 없으시다면 아래 내용을 `requirements.txt` 파일로 만드세요)
+    ```text
+    streamlit
+    google-generativeai
+    python-docx
+    reportlab
+    pypdf
+    Pillow
+    ```
+
+```
